@@ -1,5 +1,8 @@
-import NextAuth from "next-auth";
-import { authOptions } from "@/src/lib/auth";
+// src/app/api/auth/[...nextauth]/route.ts
+export const dynamic = "force-dynamic"; // <-- ADD THIS LINE HERE
+
+import NextAuth from 'next-auth';
+import { authOptions } from '@/lib/auth';
 
 const handler = NextAuth(authOptions);
 
